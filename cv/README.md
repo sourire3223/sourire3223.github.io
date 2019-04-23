@@ -1,1 +1,3 @@
-## This is my resume page.
+## 這是我的履歷 
+- 左邊頭貼, icons, about, ......，應該都可以點，會平滑移到該位置
+
