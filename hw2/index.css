@@ -1,0 +1,94 @@
+.navbar{
+	
+
+	background: -webkit-linear-gradient(87deg, rgb(255, 0, 255), rgb(255, 255, 0));
+	background: linear-gradient(87deg, rgb(255, 0, 255), rgb(255, 255, 0));
+
+	font-family: "Microsoft Yahei", "Hiragino Sans GB", sans-serif;
+	height:10vh;
+}
+body {
+    background: background: -webkit-linear-gradient(87deg, rgb(255, 0, 255), rgb(255, 255, 0));
+	background: linear-gradient(87deg, rgb(255, 200, 255), rgb(255, 255, 200));
+}
+.name {
+    font-size: 14px;
+    font-family: "Microsoft Yahei", "Hiragino Sans GB", sans-serif;
+    color: #212121;
+    margin-top: 0px;
+    margin-bottom: 3px;
+    margin-left: 20px;
+    margin-right: 20px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.price {
+    color: #ff6709;
+    font-family: "Microsoft Yahei", "Hiragino Sans GB", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.image {
+    width: 160px;
+    height: 160px;
+    margin-top: 0px;
+    margin-bottom: 22px;
+    margin-left: 37px;
+    margin-right: 37px;
+}
+
+.item {
+    height: 300px;
+    position: relative;
+    border: none;
+    background: #fff;
+    text-align: center;
+    background-clip: border-box;
+    background-image: none;
+    background-origin: padding-box;
+    margin-bottom: 20px;
+    margin-left: 14px;
+    margin-right: 0px;
+    margin-top: 0px;
+    padding-top: 34px;
+    padding-bottom: 20px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.item:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, .1);
+    transform: translate3d(-5px, -5px, 0);
+    transition-delay: 0s;
+    transition-duration: 0.1s;
+    transition-property: all;
+    transition-timing-function: linear;
+}
+#query{
+	background-color:#ffae0094;
+	outline:none;
+	border:none;
+}
+#query.focus{
+	outline:none;
+	border:none;
+}
+.nav-tabs .nav-link.active{
+	background:linear-gradient(#ff1ae5, #ffd3f4);
+	color:rgba(255,255,255,1);
+	border:none;
+}
+.nav-tabs .nav-link{
+	font-family: "Microsoft Yahei", "Hiragino Sans GB", sans-serif;
+	color:#e000f9;
+}
+#insert{
+	background:#ffae0094;
+	outline:none;
+	border:none;
+	color:#ffffff;
+}
