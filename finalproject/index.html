@@ -4,13 +4,13 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="vidwport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+    <meta name="vidwport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Final Project</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="./finalproject.css" rel="stylesheet">
 </head>
 
-<body style="touch-action: manipulation">
+<body style="touch-action:manipulation">
 
     <nav class="navbar navbar-expand-md  navbar-offcanvas text-center">
         <div class="container-fluid" style="position: absolute; width: 93vw;right: 4.5vw;left: 2.5vw;">
@@ -58,7 +58,10 @@
 		<div class="title">&emsp;Material</div>
 		<div id="material" class="text-center BtnSet">
 			
-			<button id="purplePowder" onclick="materialToggleSelect(this.id)" style="background-image:linear-gradient(rgba(121,136,154,0.6), rgba(121,136,154,0.6)),URL('./img/purplePowder_armor.png');" class="selected"></button>
+			<button id="purplePowder" onclick="materialToggleSelect(this.id)" style="background-image:linear-gradient(rgba(121,136,154,0.6), rgba(121,136,154,0.6)),linear-gradient(rgba(159,94,235,1) 5%, rgba(0,0,0,0) 5%, rgba(0,0,0,0) 95%, rgba(159,94,235,1) 95%),
+																					linear-gradient(to right, rgba(159,94,235,1) 5%, rgba(0,0,0,0) 5%, rgba(0,0,0,0) 95%, rgba(159,94,235,1) 5%),URL('./img/purplePowder_armor.png');" class="selected"></button>
+			<button id="purpleStone" onclick="materialToggleSelect(this.id)" style="background-image:linear-gradient(rgba(159,94,235,1) 5%, rgba(0,0,0,0) 5%, rgba(0,0,0,0) 95%, rgba(159,94,235,1) 95%),
+																					linear-gradient(to right, rgba(159,94,235,1) 5%, rgba(0,0,0,0) 5%, rgba(0,0,0,0) 95%, rgba(159,94,235,1) 5%),URL('./img/purpleStone_armor.png');"> </button>
 			<button id="purpleEquip" onclick="materialToggleSelect(this.id)" style="background-image:linear-gradient(rgba(159,94,235,1) 5%, rgba(0,0,0,0) 5%, rgba(0,0,0,0) 95%, rgba(159,94,235,1) 95%),
 																					linear-gradient(to right, rgba(159,94,235,1) 5%, rgba(0,0,0,0) 5%, rgba(0,0,0,0) 95%, rgba(159,94,235,1) 5%),URL('./img/armor.png');"><div>&ensp;Lv.1&ensp;</div></button>
 			<button id="purpleMaxedEquip" onclick="materialToggleSelect(this.id)" style="background-image:linear-gradient(rgba(159,94,235,1) 5%, rgba(0,0,0,0) 5%, rgba(0,0,0,0) 95%, rgba(159,94,235,1) 95%),

@@ -396,14 +396,14 @@ button:hover{
 	opacity:0.6;
 }
 button:active{
-	
+	/* filter:blur(10px); */
 	outline:none;
 }
 .locked:hover{
 	opacity:0.8;
 }
 .locked:active{
-	
+	/* filter:blur(1px); */
 	outline:none;
 }
 button:focus{
