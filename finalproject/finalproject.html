@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-tw" class="easy-sidebar-active">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="vidwport" content="width=device-width, initial-scale=1">
+    <title>Final Project</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="./finalproject.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-md  navbar-offcanvas text-center">
+        <div class="container-fluid" style="position: absolute; width: 93vw;right: 4.5vw;left: 2.5vw;">
+            <a class="navbar-brand"  href="#">Final Project</a>
+            <button class="navbar-toggler navbar-toggler-right navbar-icon" type="button" data-toggle="collapse" data-target="#navbar-mobile" aria-controls="navbar-mobile" aria-expanded="false" aria-label="Toggle navigation" style="display:none;">
+                <span class="icon-bar bar1"></span>
+                <span class="icon-bar bar2"></span>
+                <span class="icon-bar bar3"></span>
+            </button>
+            
+        </div>
+    </nav>
+
+    <div class="wrapper text-center" style="width:100%;height:90vh" id="swipe">	
+		<!-- <div style="5vh;"></div> -->
+		<div class="title">&emsp;Result</div>
+		<div id="result" class="row BtnSet">
+			<div class="col-2"></div>
+			<div id="resultEquip" class="text-center col-2" style="">
+			</div>
+			<div id="resultMaterial" class="text-center col-6">
+			</div>
+			<div class="col-2"></div>
+		</div>	
+		<div class="title">&emsp;Equipment</div>
+		<div id="equip" class="text-center BtnSet">
+			<button id="purpleWeapon"  onclick="equipToggleTarget(this.id)" style="background-image:linear-gradient(rgba(159,94,235,1) 5%, rgba(0,0,0,0) 5%, rgba(0,0,0,0) 95%, rgba(159,94,235,1) 95%),
+																					linear-gradient(to right, rgba(159,94,235,1) 5%, rgba(0,0,0,0) 5%, rgba(0,0,0,0) 95%, rgba(159,94,235,1) 5%),URL('./img/weapon.png');"></button>
+			<button id="orangeWeapon" onclick="equipToggleTarget(this.id)" style="background-image:linear-gradient(rgba(255,150,56,1) 5%, rgba(0,0,0,0) 5%, rgba(0,0,0,0) 95%, rgba(255,150,56,1) 95%),
+																					linear-gradient(to right, rgba(255,150,56,1) 5%, rgba(0,0,0,0) 5%, rgba(0,0,0,0) 95%, rgba(255,150,56,1) 5%),URL('./img/weapon.png');"></button>
+			<button id="greenWeapon" onclick="equipToggleTarget(this.id)" style="background-image:linear-gradient(rgba(9,174,100,1) 5%, rgba(0,0,0,0) 5%, rgba(0,0,0,0) 95%, rgba(9,174,100,1) 95%),
+																					linear-gradient(to right, rgba(9,174,100,1) 5%, rgba(0,0,0,0) 5%, rgba(0,0,0,0) 95%, rgba(9,174,100,1) 5%),URL('./img/weapon.png');"></button>
+			<button id="redWeapon" onclick="equipToggleTarget(this.id)" style="background-image:linear-gradient(rgba(255,0,0,1) 5%, rgba(0,0,0,0) 5%, rgba(0,0,0,0) 95%, rgba(255,0,0,1) 95%),
+																					linear-gradient(to right, rgba(255,0,0,1) 5%, rgba(0,0,0,0) 5%, rgba(0,0,0,0) 95%, rgba(255,0,0,1) 5%),URL('./img/weapon.png')"></button>
+			<br>
+			<button id="purpleArmor"  onclick="equipToggleTarget(this.id)" style="background-image:linear-gradient(rgba(159,94,235,1) 5%, rgba(0,0,0,0) 5%, rgba(0,0,0,0) 95%, rgba(159,94,235,1) 95%),
+																					linear-gradient(to right, rgba(159,94,235,1) 5%, rgba(0,0,0,0) 5%, rgba(0,0,0,0) 95%, rgba(159,94,235,1) 5%),URL('./img/armor.png');"></button>
+			<button id="orangeArmor" onclick="equipToggleTarget(this.id)" style="background-image:linear-gradient(rgba(255,150,56,1) 5%, rgba(0,0,0,0) 5%, rgba(0,0,0,0) 95%, rgba(255,150,56,1) 95%),
+																					linear-gradient(to right, rgba(255,150,56,1) 5%, rgba(0,0,0,0) 5%, rgba(0,0,0,0) 95%, rgba(255,150,56,1) 5%),URL('./img/armor.png');"></button>
+			<button id="greenArmor" onclick="equipToggleTarget(this.id)" style="background-image:linear-gradient(rgba(9,174,100,1) 5%, rgba(0,0,0,0) 5%, rgba(0,0,0,0) 95%, rgba(9,174,100,1) 95%),
+																					linear-gradient(to right, rgba(9,174,100,1) 5%, rgba(0,0,0,0) 5%, rgba(0,0,0,0) 95%, rgba(9,174,100,1) 5%),URL('./img/armor.png');"></button>
+			<button id="redArmor" onclick="equipToggleTarget(this.id)" style="background-image:linear-gradient(rgba(255,0,0,1) 5%, rgba(0,0,0,0) 5%, rgba(0,0,0,0) 95%, rgba(255,0,0,1) 95%),
+																					linear-gradient(to right, rgba(255,0,0,1) 5%, rgba(0,0,0,0) 5%, rgba(0,0,0,0) 95%, rgba(255,0,0,1) 5%),URL('./img/armor.png');"></button>
+		</div>
+		<div class="title">&emsp;Material</div>
+		<div id="material" class="text-center BtnSet">
+			
+			<button id="purplePowder" onclick="materialToggleSelect(this.id)" style="background-image:linear-gradient(rgba(121,136,154,0.6), rgba(121,136,154,0.6)),linear-gradient(rgba(159,94,235,1) 5%, rgba(0,0,0,0) 5%, rgba(0,0,0,0) 95%, rgba(159,94,235,1) 95%),
+																					linear-gradient(to right, rgba(159,94,235,1) 5%, rgba(0,0,0,0) 5%, rgba(0,0,0,0) 95%, rgba(159,94,235,1) 5%),URL('./img/purplePowder_armor.png');" class="selected"></button>
+			<button id="purpleStone" onclick="materialToggleSelect(this.id)" style="background-image:linear-gradient(rgba(159,94,235,1) 5%, rgba(0,0,0,0) 5%, rgba(0,0,0,0) 95%, rgba(159,94,235,1) 95%),
+																					linear-gradient(to right, rgba(159,94,235,1) 5%, rgba(0,0,0,0) 5%, rgba(0,0,0,0) 95%, rgba(159,94,235,1) 5%),URL('./img/purpleStone_armor.png');"> </button>
+			<button id="purpleEquip" onclick="materialToggleSelect(this.id)" style="background-image:linear-gradient(rgba(159,94,235,1) 5%, rgba(0,0,0,0) 5%, rgba(0,0,0,0) 95%, rgba(159,94,235,1) 95%),
+																					linear-gradient(to right, rgba(159,94,235,1) 5%, rgba(0,0,0,0) 5%, rgba(0,0,0,0) 95%, rgba(159,94,235,1) 5%),URL('./img/armor.png');"><div>&ensp;Lv.1&ensp;</div></button>
+			<button id="purpleMaxedEquip" onclick="materialToggleSelect(this.id)" style="background-image:linear-gradient(rgba(159,94,235,1) 5%, rgba(0,0,0,0) 5%, rgba(0,0,0,0) 95%, rgba(159,94,235,1) 95%),
+																					linear-gradient(to right, rgba(159,94,235,1) 5%, rgba(0,0,0,0) 5%, rgba(0,0,0,0) 95%, rgba(159,94,235,1) 5%),URL('./img/armor.png');"><div>&ensp;Lv.15&ensp;</div></button>
+			<button id="orangePowder" onclick="materialToggleSelect(this.id)" style="background-image:linear-gradient(rgba(255,150,56,1) 5%, rgba(0,0,0,0) 5%, rgba(0,0,0,0) 95%, rgba(255,150,56,1) 95%),
+																					linear-gradient(to right, rgba(255,150,56,1) 5%, rgba(0,0,0,0) 5%, rgba(0,0,0,0) 95%, rgba(255,150,56,1) 5%),URL('./img/orangePowder_armor.png');"> </button>
+			<button id="orangeEquip" onclick="materialToggleSelect(this.id)" style="background-image:linear-gradient(rgba(255,150,56,1) 5%, rgba(0,0,0,0) 5%, rgba(0,0,0,0) 95%, rgba(255,150,56,1) 95%),
+																					linear-gradient(to right, rgba(255,150,56,1) 5%, rgba(0,0,0,0) 5%, rgba(0,0,0,0) 95%, rgba(255,150,56,1) 5%),URL('./img/armor.png');"><div>&ensp;Lv.1&ensp;</div></button>
+			<button id="orangeMaxedEquip" onclick="materialToggleSelect(this.id)" style="background-image:linear-gradient(rgba(255,150,56,1) 5%, rgba(0,0,0,0) 5%, rgba(0,0,0,0) 95%, rgba(255,150,56,1) 95%),
+																					linear-gradient(to right, rgba(255,150,56,1) 5%, rgba(0,0,0,0) 5%, rgba(0,0,0,0) 95%, rgba(255,150,56,1) 5%),URL('./img/armor.png');"><div>&ensp;Lv.20&ensp;</div></button>
+		</div>
+
+	<footer style="height:2vh;font-size:1.2vh">
+		Copyright© 2019 sourire3223.github.io
+	</footer>
+	</div>
+	<div class="navbar-collapse collapse ml-auto" id="navbar-mobile">
+		<ul class="navbar-nav navbar-top" id="NavItems">
+			<li class="nav-item">
+				<a class="nav-link" href="#">Link1</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Link2</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Link3</a>
+			</li>
+	
+		</ul>
+	</div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="./finalproject.js"></script>
+	
+</body>
+
+</html>
