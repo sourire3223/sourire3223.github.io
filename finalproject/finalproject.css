@@ -1,4 +1,3 @@
-
 .wrapper { transition: all 0.3s cubic-bezier(0.685, 0.0473, 0.346, 1); }
  
 .navbar {
@@ -9,15 +8,13 @@
 .navbar-brand{
 	font-size:5.5vh;
 	letter-spacing:0.05vh;
-	font-family:Comic Sans MS,"Trebuchet MS",Arial,Helvetica,sans-serif;
 	font-weight:bold;
 	color:#ff7000;
 }
  .nav-link{
-	color:#ffaf00;
+	color:#ff89d8;
 	font-size:3.82vh;
 	font-weight:bold;
-	font-family:Comic Sans MS;
  }
 .navbar-offcanvas { z-index: 1030; }
  
@@ -108,14 +105,15 @@
  
 .nav-open .navbar-collapse { transform: translate3d(0px, 0, 0); }
  
-.nav-open .navbar > .container-fluid { transform: translate3d(-424px, 0, 0); }
+/* .nav-open .navbar > .container-fluid { transform: translate3d(-424px, 0, 0); } */
  
-@media (max-width: 991px) {
+/* @media (max-width: 991px) { */
  
-.nav-open .navbar > .container-fluid { transform: translate3d(-38.7vw, 0, 0); }
-}
+/* .nav-open .navbar > .container-fluid { transform: translate3d(-38.7vw, 0, 0); } */
+/* } */
  
-.nav-open .wrapper { transform: translate3d(-38.7vw, 0, 0); }
+/* .nav-open .wrapper { transform: translate3d(-33.7vw, 0, 0); } */
+.nav-open .navbar-icon{transform: translate3d(-33.7vw, 0, 0); transition: .15s;}
  
 body > .navbar-collapse {
   display: block !important;
@@ -206,7 +204,7 @@ body > #overlay {
   position: fixed;
   top: 0;
   left: auto;
-  right: calc(282.6666666667px - 10px);
+  right: 0vw;
   width: 100%;
   height: 100%;
   opacity: 0;
@@ -214,10 +212,10 @@ body > #overlay {
   z-index: 1029;
 }
  
-@media (min-width: 992px) {
+/* @media (min-width: 992px) { */
  
-body > #overlay { right: calc(424px - 10px); }
-}
+/* body > #overlay { right: calc(424px - 10px); } */
+/* } */
  
 @keyframes 
 topbar-x {  0% {
@@ -288,7 +286,10 @@ bottombar-back {  0% {
 }
 
 
-     
+body{
+	font-family:ComicTTF, Comic sans MS, Comic sans, sans-serif;
+	
+}  
 
 button{
 	padding:0;
@@ -315,7 +316,6 @@ button{
 	background:linear-gradient(to right,#ffff70, #ffffb0);
 	font-size:3.85vh;
 	color:#ffffff;
-	font-family:Comic Sans MS;
 	text-shadow: -0.2vh -0.2vh 0 #ff9000, 
                0.2vh -0.2vh 0 #ff9000,
               -0.2vh 0.2vh 0 #ff9000, 
@@ -346,16 +346,15 @@ button{
 	background-color: rgba(220,222,225,1);
 	background-size: contain;
 }
-#resultMaterial>button>span{
+#resultMaterial > button > span{
 	position:absolute;
-    top:4%;
+    top:-2%;
     right:8%;
 	color:red;
 	height:2vw;
 	/* width:5vw; */
 	font-size:2vh;
 	font-weight:bold;
-	font-family:Comic Sans MS;
 	letter-spacing:0.05vw
 }
 #equip > button{
@@ -410,4 +409,7 @@ button:focus{
 	opacity:1;
 }
 
-
+#copyright:hover{
+	color:#000000;
+	text-decoration: none;
+}

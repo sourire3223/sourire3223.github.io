@@ -143,18 +143,9 @@ var offCanvas = {
             // the sidebar will close
             $toggle.on('click', function () {
                 if (offCanvas.sidenav.sidenav_visible == 1) {
-                    $('html').removeClass('nav-open');
-                    offCanvas.sidenav.sidenav_visible = 0;
-                    setTimeout(function() {
-                        $toggle.removeClass('toggled');
-                    }, 300);
+                    closeCanvas()
                 } else {
-                    setTimeout(function() {
-                        $toggle.addClass('toggled');
-                    }, 300);
- 
-                    $('html').addClass('nav-open');
-                    offCanvas.sidenav.sidenav_visible = 1;
+                    showCanvas()
                 }
             });
             // Set navbar to initialized
@@ -198,22 +189,13 @@ var offCanvas = {
 			onTouchEnd: function(e){
 				if (!this.isScrolling) {
 					if(!this.start) return;
-
 				
 					if ((this.start.x - this.curr.x >  window_width / 12) && offCanvas.sidenav.sidenav_visible == 0){
-						setTimeout(function() {
-							$toggle.addClass('toggled');
-						}, 300);
-						$('html').addClass('nav-open');
-						offCanvas.sidenav.sidenav_visible = 1;
+						showCanvas()
 					}
 					else if((this.start.x - this.curr.x < 12) && offCanvas.sidenav.sidenav_visible == 1){
-						$('html').removeClass('nav-open');
-						offCanvas.sidenav.sidenav_visible = 0;
-						setTimeout(function() {
-							$toggle.removeClass('toggled');
-						}, 300);
-			}
+						closeCanvas()
+					}	
 				}
 				this.start = null;
 				this.curr = null;
@@ -229,6 +211,27 @@ var offCanvas = {
 	}
 };
  
+ function showCanvas(){
+	$('html').addClass('nav-open');
+	setTimeout(function() {
+		$toggle.addClass('toggled');
+	}, 300);
+	$('<div id="overlay"></div>').appendTo("body").on('click', function() {
+		closeCanvas()
+	});
+	offCanvas.sidenav.sidenav_visible = 1;
+ }
+ function closeCanvas(){
+	 $('html').removeClass('nav-open');
+	setTimeout(function() {
+		$toggle.removeClass('toggled');
+	}, 300);
+	$('#overlay').remove();
+	offCanvas.sidenav.sidenav_visible = 0;
+ }
+
+
+
 $(document).ready(function () {
 	// UI
    window_width = $(window).width();
@@ -238,7 +241,7 @@ $(document).ready(function () {
     if (window_width > 992) {
 		var $navItems = $("#NavItems")
 		$("a.navbar-brand").after($navItems[0])
-		$("body > .navbar-collapse::after").hide()
+		$("body > .navbar-collapse::	after").hide()
 		// $navItems.remove()
     }
 	else if(isMobile()){
