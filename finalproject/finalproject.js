@@ -241,7 +241,7 @@ $(document).ready(function () {
     if (window_width > 992) {
 		var $navItems = $("#NavItems")
 		$("a.navbar-brand").after($navItems[0])
-		$("body > .navbar-collapse::	after").hide()
+		$("body > .navbar-collapse::after").hide()
 		// $navItems.remove()
     }
 	else if(isMobile()){
